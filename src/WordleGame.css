@@ -1,0 +1,38 @@
+.wordle-game {
+
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+}
+
+.tile {
+  width: 62px;
+  height: 62px;
+  border: 2px solid #d3d6da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+.tile[data-state] {
+  color: white;
+  border: none;
+}
+
+.tile[data-state='correct'] { background-color: #6aaa64; }
+.tile[data-state='present'] { background-color: #c9b458; }
+.tile[data-state='absent'] { background-color: #787c7e; }
